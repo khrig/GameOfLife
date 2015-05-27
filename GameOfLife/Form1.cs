@@ -29,8 +29,10 @@ namespace GameOfLife {
             _patternCreator = new PatternCreator();
 
             var cells = new LifeBoard(128, 96);
-            _patternCreator.RandomizeBoard(cells);
-            
+            //_patternCreator.RandomizeBoard(cells);
+            //_patternCreator.AddGlider(cells, 10, 10);
+            _patternCreator.AddGosperGliderGun(cells, 30, 40);
+
             _gameOfLife = new GameOfLife(cells, generations);
             _gameOfLife.NewGeneration += _gameOfLife_NewGeneration;
 
